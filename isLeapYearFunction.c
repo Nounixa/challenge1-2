@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-
 bool is_leap_year(int a){
-    int i;
     //declaration d'une variable de type boolean
     bool Premier = false;
     //verifie si l'annee est divisible par 4 ou par 400
