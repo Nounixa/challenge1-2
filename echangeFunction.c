@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-int echange(int a,int b){
-    a=b;
-    return a;
+void echange(int * a,int * b){
+    int tmp;
+    tmp=*a;
+    *a=*b;
+    *b=tmp;
 }
 
 int main()
@@ -13,7 +15,8 @@ int main()
   scanf("%d",&a);
   printf("entrer un autre nombre entier");
   scanf("%d",&b);
+  echange(&a,&b);
   //l'appel de la fonction echange pour echanger la valeur de a par b
-  printf("la nouvelle valeur de a est : %d ",echange(a,b));
+  printf("la nouvelle valeur de a et b est : a=%d,b=%d",a,b);
    
 }
