@@ -13,8 +13,6 @@ int main()
     printf("***********\n");
     for (i = 0; i < strlen(Mot1); i++)
     {
-        if (Mot1[i] != ' ')
-        {
             for (j = 0; j < strlen(Mot2); j++)
             {
                     if (Mot1[i] == Mot2[j])
@@ -23,13 +21,8 @@ int main()
                         break;
                     }
             }
-        }
-        else
-        {
-            k++;
-        }
     }
-    if (n == strlen(Mot1) - k)
+    if (n == strlen(Mot1))
     {
         printf("les deux mots sont anagramme\n");
     }
