@@ -13,13 +13,19 @@ bool isPremier(int a, int b){
     //declaration d'une variable de type boolean
     bool Premier = true;
     //si le nombre enter par l'utilisateur est negatif on doit changer la signe de se nombre avant verifier si il'est premier ou non
-//
+    if ( dividedBy(a,b)<= 1)
+    {
+        Premier = false;
+    }
+    else
+    {
     //diviser sur tous les nombres de 2 jusqu'au la racine de a 
     for(i=2;i<=sqrt(dividedBy(a,b));i++){
         if(dividedBy(a,b)%i==0){
           Premier=false;
           break;
         }
+    }
     }
     return Premier;
 }
