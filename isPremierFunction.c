@@ -23,7 +23,7 @@ bool isPremier(int a)
         }
     }
     return Premier;
-}
+}   
 
 int main()
 {
