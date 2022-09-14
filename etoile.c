@@ -6,13 +6,17 @@ int main(){
         printf("les donnees de l'etudiant \n");
         scanf("%d",&a);
 
-        for ( i = a; i <= 0; i--)
+        for ( i = a; i != 0; i--)
         {  
-            for (k = i/2 ; k<=0 ; k--)
+            for (k = 0 ; k<i ; k++)
            {
-               printf("\t"); 
+               printf(" "); 
            }
-           for (j = 0 ; j <= i; j++)
+           for (j = 0 ; j <= a-i; j++)
+           {
+            printf("*"); 
+           }
+           for (j = 0 ; j <= (a-i-1); j++)
            {
             printf("*"); 
            }
