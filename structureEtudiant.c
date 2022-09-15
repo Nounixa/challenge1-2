@@ -13,9 +13,9 @@ struct Etudiant
 int main()
 {
     int n,i,b,j,k,a;
-    char tmp[20];
+    char tmp[50];
     char matieres[20][20];
-    //declarer variable de type Etudiant
+//declarer variable de type Etudiant
     struct Etudiant Etu[n];
     printf("enter le nombre des matieres\n");
     scanf("%d",&a);
@@ -23,7 +23,6 @@ int main()
     printf("enter la %d matiere\n",k);
     scanf("%s",tmp);
         for(i=0;i<strlen(tmp);i++){
-
             matieres[i][k]=tmp[i];
         }
     }
@@ -35,7 +34,6 @@ int main()
     printf("enter le nombre des notes que vous voulez entrer par etudiant \n");
     scanf("%d",&b);
     //le role de cette boucle est de repeter le remplisage des donnees d'un etudiant n fois 
-    i=1;
     for(i=1;i<=n;i++)
     {
         //demander à l'utilsateur de saisire les donnees de premier etudiant,deuxieme,troisieme...
@@ -47,7 +45,7 @@ int main()
         printf("le N de matricule:");
         scanf("%s",&Etu[i].NMatricule);
         //demander à l'utilsateur de saisire les notes de cet etudiant ...
-        for(j=1;j<=b;j++){
+        for(j=0;j<b;j++){
             for ( k = 0; k < 20; k++)
             {
                 tmp[i]=matieres[k][j];
@@ -67,7 +65,7 @@ int main()
         printf("l'age:%d\n",Etu[i].Age);
         printf("le N de matricule:%s\n",Etu[i].NMatricule);
         printf("********************les notes de cet etudiant**********************\n");
-        for(j=1;j<=b;j++){
+        for(j=0;j<b;j++){
             for ( k = 0; k < 20; k++)
             {
                 tmp[i]=matieres[k][j];
